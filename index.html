@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Test Task</title>
+</head>
+<body onload="pageWidth()">
+    <div class="page__catalog catalog _container">
+        <div class="catalog__container">
+            <div class="catalog__header header-block">
+                <h2 class="header-block__title">Каталог</h2>
+            </div>
+        </div>
+
+        <div class="catalog__choice choice">
+            <ul class="choice__list">
+                <li class="choice__item">
+                    <img src="img/sneaker.svg" alt="Shoese">
+                    <a href="#" class="choice__link active" id="shoes">Обувь</a>
+                </li>
+                <li class="choice__item">
+                    <img src="img/other-clothes.svg" alt="Other clothes">
+                    <a href="#" class="choice__link" id="clothes">Другая одежда</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <button class="filter__button hidden">ОТКРЫТЬ ФИЛЬТР</button>
+        </div>
+
+        <div class="catalog__products products filter">
+            <div class="products__list">
+                <div class="catalog__sorted sorted">
+                    <ul class="sorted__list">
+                        <li class="sorted__item">
+                            <a href="#" class="sorted__link sorted__link-grey">Сортировать</a>
+                        </li>
+                        <li class="sorted__item">
+                            <a href="#" class="sorted__link">по цене</a>
+                        </li>
+                        <li class="sorted__item">
+                            <a href="#" class="sorted__link">по алфавиту</a>
+                        </li>
+                        <li class="sorted__item">
+                            <a href="#" class="sorted__link">по дате добавления</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="catalog__shoes shoes">
+                    <div class="shoes__item item">
+                        <div class="item__icon">
+                            <img src="img/sneakers1.jpg" alt="Nike T-LITE XI">
+                        </div>
+                        <p class="item__price">3771 <span class="rub">P</span></p>
+                        <p class="item__text">Nike <span class="grey">/ Кроссовки T-LITE XI</span></p>
+                    </div>
+                    <div class="shoes__item item">
+                        <div class="item__icon">
+                            <img src="img/sneakers2.jpg" alt="Nike AIR MAX 72">
+                        </div>
+                        <p class="item__price">3771 <span class="rub">P</span></p>
+                        <p class="item__text">Nike <span class="grey">/ Кроссовки AIR MAX 720</span></p>
+                    </div>
+                    <div class="shoes__item item third">
+                        <div class="item__icon">
+                            <img src="img/sneakers3.jpg" alt="Nike MEN'S AIR MONARCH IV TRAINING SHOE">
+                        </div>
+                        <p class="item__price">3771 <span class="rub">P</span></p>
+                        <p class="item__text">Nike <span class="grey">/ Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE</span></p>
+                    </div>
+                    <div class="shoes__item item">
+                        <div class="item__icon">
+                            <img src="img/sneakers1.jpg" alt="Nike T-LITE XI">
+                        </div>
+                        <p class="item__price">3771 <span class="rub">P</span></p>
+                        <p class="item__text">Nike <span class="grey">/ Кроссовки T-LITE XI</span></p>
+                    </div>
+                    <div class="shoes__item item">
+                        <div class="item__icon">
+                            <img src="img/sneakers2.jpg" alt="Nike AIR MAX 72">
+                        </div>
+                        <p class="item__price">3771 <span class="rub">P</span></p>
+                        <p class="item__text">Nike <span class="grey">/ Кроссовки AIR MAX 720</span></p>
+                    </div>
+                    <div class="shoes__item item third">
+                        <div class="item__icon">
+                            <img src="img/sneakers3.jpg" alt="Nike MEN'S AIR MONARCH IV TRAINING SHOE">
+                        </div>
+                        <p class="item__price">3771 <span class="rub">P</span></p>
+                        <p class="item__text">Nike <span class="grey">/ Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE</span></p>
+                    </div>
+                    <div class="shoes__item item">
+                        <div class="item__icon">
+                            <img src="img/sneakers1.jpg" alt="Nike T-LITE XI">
+                        </div>
+                        <p class="item__price">3771 <span class="rub">P</span></p>
+                        <p class="item__text">Nike <span class="grey">/ Кроссовки T-LITE XI</span></p>
+                    </div>
+                    <div class="shoes__item item">
+                        <div class="item__icon">
+                            <img src="img/sneakers2.jpg" alt="Nike AIR MAX 72">
+                        </div>
+                        <p class="item__price">3771 <span class="rub">P</span></p>
+                        <p class="item__text">Nike <span class="grey">/ Кроссовки AIR MAX 720</span></p>
+                    </div>
+                    <div class="shoes__item item third">
+                        <div class="item__icon">
+                            <img src="img/sneakers3.jpg" alt="Nike MEN'S AIR MONARCH IV TRAINING SHOE">
+                        </div>
+                        <p class="item__price">3771 <span class="rub">P</span></p>
+                        <p class="item__text">Nike <span class="grey">/ Кроссовки MEN'S AIR MONARCH IV TRAINING SHOE</span></p>
+                    </div>
+                </div>
+                <button class="catalog__button">ЗАГРУЗИТЬ ЕЩЕ</button>
+            </div>
+
+            <div id="form" class="filter__form form">
+                <div class="form__filter filter">
+                    <h2 class="filter__text">Фильтры</h2>
+                    <p class="filter__subtext">
+                        <a href="#" class="filter__link">Сбросить</a>
+                    </p>
+                </div>
+                <form class="form__product">
+                    <p class="finter__header">Цена, <span class="rub">Р</span></p>
+                    <p>
+                        <input type="text" name="priceFrom" placeholder="от" maxlength="5" class="inputPrice">
+                        <input type="text" name="priceBefore" placeholder="до" maxlength="5" class="inputPrice">
+                    </p>
+                    <p class="inputRange">
+                        <input type="range" min="0" max="50000" step="1">
+                    </p>
+                    
+                    <div class="typeProduct">
+                        <p>Тип продукта</p>
+                        <p class="typeProduct__item">
+                            <input type="checkbox" name="firstType">Первый тип
+                        </p>
+                        <p class="typeProduct__item">
+                            <input type="checkbox" name="secondType">Второй тип
+                        </p>
+                    </div>
+                    
+                    <div class="category">
+                        <p>Категория</p>
+                        <p class="category__item">
+                            <input type="radio" value="shoes" checked name="category"/>Обувь
+                        </p>
+                        <p class="category__item">
+                            <input type="radio" value="clothes" name="category"/>Одежда
+                        </p>
+                        <p class="category__item">
+                            <input type="radio" value="somethingElse" name="category"/>Остальное
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
