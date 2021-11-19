@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Test Task</title>
 </head>
-<body onload="pageWidth()">
+<body>
     <div class="page__catalog catalog _container">
         <div class="catalog__container">
             <div class="catalog__header header-block">
@@ -15,7 +18,7 @@
             </div>
         </div>
 
-        <div class="catalog__choice choice">
+        <div class="catalog__choice">
             <ul class="choice__list">
                 <li class="choice__item">
                     <img src="img/sneaker.svg" alt="Shoese">
@@ -50,8 +53,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="catalog__shoes shoes">
-                    <div class="shoes__item item">
+                <div class="catalog__shoes shoes"> <!--catalog-shoes-->
+                    <div class="shoes__item item"> <!--catalog-shoes__item и т.д.-->
                         <div class="item__icon">
                             <img src="img/sneakers1.jpg" alt="Nike T-LITE XI">
                         </div>
@@ -65,7 +68,7 @@
                         <p class="item__price">3771 <span class="rub">P</span></p>
                         <p class="item__text">Nike <span class="grey">/ Кроссовки AIR MAX 720</span></p>
                     </div>
-                    <div class="shoes__item item third">
+                    <div class="shoes__item item">
                         <div class="item__icon">
                             <img src="img/sneakers3.jpg" alt="Nike MEN'S AIR MONARCH IV TRAINING SHOE">
                         </div>
@@ -86,7 +89,7 @@
                         <p class="item__price">3771 <span class="rub">P</span></p>
                         <p class="item__text">Nike <span class="grey">/ Кроссовки AIR MAX 720</span></p>
                     </div>
-                    <div class="shoes__item item third">
+                    <div class="shoes__item item">
                         <div class="item__icon">
                             <img src="img/sneakers3.jpg" alt="Nike MEN'S AIR MONARCH IV TRAINING SHOE">
                         </div>
@@ -107,7 +110,7 @@
                         <p class="item__price">3771 <span class="rub">P</span></p>
                         <p class="item__text">Nike <span class="grey">/ Кроссовки AIR MAX 720</span></p>
                     </div>
-                    <div class="shoes__item item third">
+                    <div class="shoes__item item">
                         <div class="item__icon">
                             <img src="img/sneakers3.jpg" alt="Nike MEN'S AIR MONARCH IV TRAINING SHOE">
                         </div>
@@ -127,35 +130,50 @@
                 </div>
                 <form class="form__product">
                     <p class="finter__header">Цена, <span class="rub">Р</span></p>
-                    <p>
-                        <input type="text" name="priceFrom" placeholder="от" maxlength="5" class="inputPrice">
-                        <input type="text" name="priceBefore" placeholder="до" maxlength="5" class="inputPrice">
-                    </p>
-                    <p class="inputRange">
-                        <input type="range" min="0" max="50000" step="1">
-                    </p>
+                    <div class="anmount-list">
+                        <label for="amount1"></label>
+                        <input type="text" id="amount1" class="anmount">
+                        <label for="amount2"></label>
+                        <input type="text" id="amount2" class="anmount">
+                    </div>                      
+                    <div id="slider-range"></div>                    
                     
-                    <div class="typeProduct">
-                        <p>Тип продукта</p>
-                        <p class="typeProduct__item">
-                            <input type="checkbox" name="firstType">Первый тип
-                        </p>
-                        <p class="typeProduct__item">
-                            <input type="checkbox" name="secondType">Второй тип
-                        </p>
+                    <div class="check">
+                        <p class="check__title">Тип продукта</p>
+                        <label class="check__label option">
+                            <input class="check__input" type="checkbox" checked>
+                            <span class="check__box"></span>
+                            Первый тип
+                        </label>
+                        <label class="check__label option">
+                            <input class="check__input" type="checkbox">
+                            <span class="check__box"></span>
+                            Второй тип
+                        </label>
                     </div>
                     
-                    <div class="category">
-                        <p>Категория</p>
-                        <p class="category__item">
-                            <input type="radio" value="shoes" checked name="category"/>Обувь
-                        </p>
-                        <p class="category__item">
-                            <input type="radio" value="clothes" name="category"/>Одежда
-                        </p>
-                        <p class="category__item">
-                            <input type="radio" value="somethingElse" name="category"/>Остальное
-                        </p>
+                    <div class="radio">
+                        <p class="radio__title">Категория</p>
+                        
+                            <label class="radio__label option">
+                                <input class="radio__input" type="radio" value="shoes" checked name="category"/>
+                                <span class="radio__box"></span>
+                                Обувь
+                            </label>                        
+                        
+                            <label class="radio__label option">
+                                <input class="radio__input" type="radio" value="clothes" name="category"/>
+                                <span class="radio__box"></span>
+                                Одежда
+                            </label>
+                        
+                        
+                            <label class="radio__label option">
+                                <input class="radio__input" type="radio" value="somethingElse" name="category"/>
+                                <span class="radio__box"></span>
+                                Остальное
+                            </label>
+                        
                     </div>
                 </form>
             </div>

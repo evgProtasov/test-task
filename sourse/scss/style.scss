@@ -297,47 +297,113 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     }
 }
 
-.inputPrice {
+.anmount-list {
+    padding: 0px 0px 23px 0px;
+}
+
+.anmount {
     background: #F3F3F3;
     border-radius: 4px;
     width: 112px;
     height: 40px;
     padding-left: 16px;
-    margin-left: 20px;
+    margin: 0px 0px 0px 20px;
+    
 }
 
-.inputPrice:nth-child(2){
-    margin-left: 8px;
-}
-
-.inputRange {
+#slider-range {
     width: 222px;
-    padding: 0px 0px 0px 20px;
-}
-
-input[type = range]{
-    width: 222px;
+    padding: 0px 0px 0px 20px;    
+    margin: 0px auto;
     height: 2px;
-    cursor: pointer;
+    background: #F3F3F3;
 }
 
-.typeProduct {
-    padding: 41px 0px 20px 20px;
-    font-size: 16px;
-    line-height: 20px;
-    color: $blackColor;
+/**CHECKBOX**/
+.option {
+    display: block;
+}
+.check {
+    &__title{
+        padding: 41px 0px 20px 20px;
+        font-size: 16px;
+        line-height: 20px;
+        color: $blackColor;
+    }
 
-    &__item {
+    &__input {
+        position: absolute;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    &__input:checked + .check__box{
+        background-image: url('../../img/checkbox-on.svg');
+    }
+
+    &__box {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-image: url('../../img/checkbox-disable.svg');
+        margin-left: -30px;
+    }
+
+    &__label {
+        padding-left: 50px;
+        padding-bottom: 14px;
         font-size: 14px;
         line-height: 18px;
-        color: #515151;
-        padding: 20px 0px 0px 0px;
-    }
-
-    &__item:last-child{
-        padding: 14px 0px 0px 0px;
+        color: $blackColor;
     }
 }
+
+/**RADIO**/
+
+.radio {
+
+    &__title {
+        padding: 15px 0px 26px 20px;
+        font-size: 16px;
+        line-height: 20px;
+        color: $blackColor;
+    }
+
+    &__label {
+        padding-left: 50px;
+        padding-bottom: 14px;
+        font-size: 14px;
+        line-height: 18px;
+        color: $blackColor;
+    }
+
+    &__label:last-child{
+        padding-bottom: 26px;
+    }
+
+    &__input {
+        position: absolute;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    &__input:checked + .radio__box{
+        background-image: url('../../img/radio-on.svg');
+        background-repeat: no-repeat;
+        
+    }
+
+    &__box {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-image: url('../../img/radio-disable.svg');
+        margin-left: -30px;
+    }
+}
+
 
 .category {
     padding: 15px 0px 26px 20px;
